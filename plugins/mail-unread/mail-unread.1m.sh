@@ -11,8 +11,8 @@
 set -u
 
 # Config (override via env if needed)
-SHOW_ZERO="${SHOW_ZERO:-false}"                 # show "0" when no unread
-SCRIPT_TIMEOUT_SECONDS="${SCRIPT_TIMEOUT_SECONDS:-3}"
+SHOW_ZERO="${SHOW_ZERO:-false}"                        # show "0" when no unread
+SCRIPT_TIMEOUT_SECONDS="${SCRIPT_TIMEOUT_SECONDS:-3}"  # 0 disables timeout
 
 ICON_UNREAD="${ICON_UNREAD:-envelope.badge.fill}"
 ICON_ZERO="${ICON_ZERO:-envelope}"
@@ -154,7 +154,7 @@ esac
 
 echo "---"
 
-# Use bundle id to avoid localization / renames
+# Menu items
 echo "Open Mail | bash=/usr/bin/open param1=-b param2=com.apple.mail terminal=false"
 echo "Refresh | refresh=true"
 
